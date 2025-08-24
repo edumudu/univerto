@@ -1,0 +1,45 @@
+{
+  "name": "univert",
+  "version": "0.0.0",
+  "description": "Simple, 0-dependency unit converter with fluent API",
+  "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module",
+  "keywords": [
+    "unit",
+    "unit converter",
+    "converter"
+  ],
+  "author": "Eduardo Wesley <eduardowesley.re@gmail.com>",
+  "license": "MIT",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.cts",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./time": {
+      "import": "./dist/time.js",
+      "require": "./dist/time.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "tsdown": "^0.14.1",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@types/convert-units": "^2.3.12",
+    "convert-units": "^2.3.4"
+  }
+}
