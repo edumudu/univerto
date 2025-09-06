@@ -51,6 +51,10 @@
       "import": "./dist/units/time.js",
       "require": "./dist/units/time.cjs"
     },
+    "./voltage": {
+      "import": "./dist/units/voltage.js",
+      "require": "./dist/units/voltage.cjs"
+    },
     "./volume": {
       "import": "./dist/units/volume.js",
       "require": "./dist/units/volume.cjs"
