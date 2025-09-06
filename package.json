@@ -1,6 +1,6 @@
 {
   "name": "univerto",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Simple, 0-dependency unit converter with fluent API",
   "packageManager": "pnpm@10.14.0",
   "engines": {
@@ -30,10 +30,6 @@
     "./time": {
       "import": "./dist/time.js",
       "require": "./dist/time.cjs"
-    },
-    "./length": {
-      "import": "./dist/length.js",
-      "require": "./dist/length.cjs"
     },
     "./package.json": "./package.json"
   },
