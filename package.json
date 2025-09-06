@@ -1,6 +1,6 @@
 {
-  "name": "univert",
-  "version": "0.0.0",
+  "name": "univerto",
+  "version": "0.0.4",
   "description": "Simple, 0-dependency unit converter with fluent API",
   "packageManager": "pnpm@10.14.0",
   "engines": {
@@ -17,7 +17,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/edumudu/univerto.git"
-  }
+  },
   "homepage": "https://github.com/edumudu/univerto#readme",
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.cts",
