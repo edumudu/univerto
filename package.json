@@ -27,6 +27,10 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
+    "./area": {
+      "import": "./dist/units/area.js",
+      "require": "./dist/units/area.cjs"
+    },
     "./data": {
       "import": "./dist/units/data.js",
       "require": "./dist/units/data.cjs"
