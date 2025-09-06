@@ -7,12 +7,20 @@ export default defineConfig({
   format: ['cjs', 'esm'],
   platform: 'neutral',
 
-  // Experimental
-  exports: true,
   unbundle: true,
 
+  // Experimental
+  exports: {
+    customExports(exports) {
+      const entries = Object.entries(exports)
+        .map(([key, value]) => [key.replace('units/', ''), value])
+
+      return Object.fromEntries(entries)
+    },
+  },
+
   entry: [
-    'src/time.ts',
+    'src/units/*.ts',
     'src/index.ts',
   ]
 })

@@ -27,25 +27,25 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./time": {
-      "import": "./dist/time.js",
-      "require": "./dist/time.cjs"
+    "./data": {
+      "import": "./dist/units/data.js",
+      "require": "./dist/units/data.cjs"
     },
     "./length": {
-      "import": "./dist/length.js",
-      "require": "./dist/length.cjs"
+      "import": "./dist/units/length.js",
+      "require": "./dist/units/length.cjs"
     },
     "./mass": {
-      "import": "./dist/mass.js",
-      "require": "./dist/mass.cjs"
+      "import": "./dist/units/mass.js",
+      "require": "./dist/units/mass.cjs"
     },
-    "./data": {
-      "import": "./dist/data.js",
-      "require": "./dist/data.cjs"
+    "./time": {
+      "import": "./dist/units/time.js",
+      "require": "./dist/units/time.cjs"
     },
     "./volume": {
-      "import": "./dist/volume.js",
-      "require": "./dist/volume.cjs"
+      "import": "./dist/units/volume.js",
+      "require": "./dist/units/volume.cjs"
     },
     "./package.json": "./package.json"
   },
