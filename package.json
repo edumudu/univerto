@@ -43,6 +43,10 @@
       "import": "./dist/units/mass.js",
       "require": "./dist/units/mass.cjs"
     },
+    "./speed": {
+      "import": "./dist/units/speed.js",
+      "require": "./dist/units/speed.cjs"
+    },
     "./time": {
       "import": "./dist/units/time.js",
       "require": "./dist/units/time.cjs"
