@@ -31,6 +31,22 @@
       "import": "./dist/time.js",
       "require": "./dist/time.cjs"
     },
+    "./length": {
+      "import": "./dist/length.js",
+      "require": "./dist/length.cjs"
+    },
+    "./mass": {
+      "import": "./dist/mass.js",
+      "require": "./dist/mass.cjs"
+    },
+    "./data": {
+      "import": "./dist/data.js",
+      "require": "./dist/data.cjs"
+    },
+    "./volume": {
+      "import": "./dist/volume.js",
+      "require": "./dist/volume.cjs"
+    },
     "./package.json": "./package.json"
   },
   "scripts": {
