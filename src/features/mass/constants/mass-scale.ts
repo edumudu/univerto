@@ -1,0 +1,27 @@
+import type { MassUnit } from './mass-unit'
+import { MASS_UNIT } from './mass-unit';
+
+const MICROGRAM = 1;
+const MILLIGRAM = 1_000 * MICROGRAM;
+const GRAM = 1_000 * MILLIGRAM;
+const KILOGRAM = 1_000 * GRAM;
+const METRIC_TON = 1_000 * KILOGRAM;
+
+const OUNCE = 28.349523125 * GRAM;
+const POUND = 16 * OUNCE;
+const STONE = 14 * POUND;
+const SHORT_TON = 2_000 * POUND;
+const LONG_TON = 2_240 * POUND;
+
+export const massScale: Record<MassUnit, number> = {
+  [MASS_UNIT.MICROGRAM]: MICROGRAM,
+  [MASS_UNIT.MILLIGRAM]: MILLIGRAM,
+  [MASS_UNIT.GRAM]: GRAM,
+  [MASS_UNIT.KILOGRAM]: KILOGRAM,
+  [MASS_UNIT.METRIC_TON]: METRIC_TON,
+  [MASS_UNIT.OUNCE]: OUNCE,
+  [MASS_UNIT.POUND]: POUND,
+  [MASS_UNIT.STONE]: STONE,
+  [MASS_UNIT.SHORT_TON]: SHORT_TON,
+  [MASS_UNIT.LONG_TON]: LONG_TON,
+};
