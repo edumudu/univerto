@@ -31,6 +31,14 @@
       "import": "./dist/time.js",
       "require": "./dist/time.cjs"
     },
+    "./length": {
+      "import": "./dist/length.js",
+      "require": "./dist/length.cjs"
+    },
+    "./data": {
+      "import": "./dist/data.js",
+      "require": "./dist/data.cjs"
+    },
     "./package.json": "./package.json"
   },
   "scripts": {
