@@ -1,4 +1,4 @@
-import { createConverter } from '~/features/core/utils/create-converter';
-import { voltageScale } from '../constants/voltage-scale';
+import { createPreciseConverter } from '~/features/core/utils/create-precise-converter';
+import { voltageScale } from '~/features/voltage/constants/voltage-scale';
 
-export const VoltageUnitConverter = createConverter(voltageScale);
+export const VoltageUnitConverter = createPreciseConverter(voltageScale);

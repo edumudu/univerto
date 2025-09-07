@@ -1,14 +1,10 @@
 import type { VoltageUnit } from './voltage-unit'
 import { VOLTAGE_UNIT } from './voltage-unit';
+import type { UnitScale } from '~/features/core/types/unit-scale';
 
-const VOLT = 1;
-const MILLIVOLT = 0.001 * VOLT; 
-const KILOVOLT = 1000 * VOLT; 
-const MEGAVOLT = 1_000_000 * VOLT; 
-
-export const voltageScale: Record<VoltageUnit, number> = {
-  [VOLTAGE_UNIT.MILLIVOLT]: MILLIVOLT,
-  [VOLTAGE_UNIT.VOLT]: VOLT,
-  [VOLTAGE_UNIT.KILOVOLT]: KILOVOLT,
-  [VOLTAGE_UNIT.MEGAVOLT]: MEGAVOLT,
+export const voltageScale: Record<VoltageUnit, UnitScale> = {
+  [VOLTAGE_UNIT.MILLIVOLT]: { base: 10, exponent: -3 },
+  [VOLTAGE_UNIT.VOLT]:      { base: 10, exponent: 0 },
+  [VOLTAGE_UNIT.KILOVOLT]:  { base: 10, exponent: 3 },
+  [VOLTAGE_UNIT.MEGAVOLT]:  { base: 10, exponent: 6 },
 };
