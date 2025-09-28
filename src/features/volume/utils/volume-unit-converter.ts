@@ -1,4 +1,4 @@
-import { createConverter } from '~/features/core/utils/create-converter';
 import { volumeScale } from '../constants/volume-scale';
+import { createPreciseConverter } from '~/features/core/utils/create-precise-converter';
 
-export const VolumeUnitConverter = createConverter(volumeScale);
+export const VolumeUnitConverter = createPreciseConverter(volumeScale);
