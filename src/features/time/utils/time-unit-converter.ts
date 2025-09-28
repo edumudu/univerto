@@ -1,5 +1,4 @@
-import { createConverter } from '~/features/core/utils/create-converter';
 import { timeScale } from '../constants/time-scale';
+import { createPreciseConverter } from '~/features/core/utils/create-precise-converter';
 
-export const TimeUnitConverter = createConverter(timeScale);
-
+export const TimeUnitConverter = createPreciseConverter(timeScale);
