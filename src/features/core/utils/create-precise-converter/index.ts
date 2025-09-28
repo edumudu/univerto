@@ -1,7 +1,6 @@
-import type { UnitScale } from '~/features/core/types/unit-scale';
 import { Rational } from '~/features/core/utils/rational';
 
-export function createPreciseConverter<S extends Record<string, UnitScale>, Unit extends keyof S>(scale: S) {
+export function createPreciseConverter<S extends Record<string, Rational>, Unit extends keyof S>(scale: S) {
   function from(fromQuantity: number, fromUnit: Unit) {
     if (scale[fromUnit] === undefined) throw new Error(`Invalid "from" unit "${fromUnit.toString()}"`)
 
@@ -9,12 +8,11 @@ export function createPreciseConverter<S extends Record<string, UnitScale>, Unit
       if (scale[targetUnit] === undefined) throw new Error(`Invalid "to" unit "${targetUnit.toString()}"`)
 
       function convertToRational() {
-        const fromExp = scale[fromUnit].exponent;
-        const toExp = scale[targetUnit].exponent;
-        const exponentDif = fromExp - toExp;
+        const from = scale[fromUnit];
+        const to = scale[targetUnit];
 
         const fromRational = Rational.fromNumber(fromQuantity)
-        const factor = Rational.pow(scale[fromUnit].base, exponentDif);
+        const factor = from.divide(to);
 
         return fromRational.multiply(factor)
       }
