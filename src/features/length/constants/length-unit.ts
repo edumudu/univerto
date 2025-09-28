@@ -7,8 +7,13 @@ export const LENGTH_UNIT = Object.freeze({
   CENTIMETER: 'centimeter',
   METER: 'meter',
   KILOMETER: 'kilometer',
-  MILE: 'mile',
-  YARD: 'yard',
-  FOOT: 'foot',
+
   INCH: 'inch',
+  HAND: 'hand',
+  FOOT: 'foot',
+  YARD: 'yard',
+  CHAIN: 'chain',
+  FURLONG: 'furlong',
+  MILE: 'mile',
+  LEAGUE: 'league'
 });
