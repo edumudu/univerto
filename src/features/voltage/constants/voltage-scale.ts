@@ -1,10 +1,17 @@
+import { Rational } from '~/features/core/utils/rational';
 import type { VoltageUnit } from './voltage-unit'
 import { VOLTAGE_UNIT } from './voltage-unit';
-import type { UnitScale } from '~/features/core/types/unit-scale';
+import { scaleUnit } from '~/features/core/utils/scale-unit';
 
-export const voltageScale: Record<VoltageUnit, UnitScale> = {
-  [VOLTAGE_UNIT.MILLIVOLT]: { base: 10, exponent: -3 },
-  [VOLTAGE_UNIT.VOLT]:      { base: 10, exponent: 0 },
-  [VOLTAGE_UNIT.KILOVOLT]:  { base: 10, exponent: 3 },
-  [VOLTAGE_UNIT.MEGAVOLT]:  { base: 10, exponent: 6 },
+const VOLT = new Rational(1, 1); // Base
+
+const MILLIVOLT = scaleUnit(VOLT, 1, 1e3);
+const KILOVOLT = scaleUnit(VOLT, 1e3);
+const MEGAVOLT = scaleUnit(KILOVOLT, 1e3);
+
+export const voltageScale: Record<VoltageUnit, Rational> = {
+  [VOLTAGE_UNIT.MILLIVOLT]: MILLIVOLT,
+  [VOLTAGE_UNIT.VOLT]:      VOLT,
+  [VOLTAGE_UNIT.KILOVOLT]:  KILOVOLT,
+  [VOLTAGE_UNIT.MEGAVOLT]:  MEGAVOLT,
 };
