@@ -1,4 +1,4 @@
-import { createConverter } from '~/features/core/utils/create-converter';
 import { massScale } from '../constants/mass-scale';
+import { createPreciseConverter } from '~/features/core/utils/create-precise-converter';
 
-export const MassUnitConverter = createConverter(massScale);
+export const MassUnitConverter = createPreciseConverter(massScale);

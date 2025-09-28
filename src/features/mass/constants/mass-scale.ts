@@ -1,19 +1,22 @@
+import { Rational } from '~/features/core/utils/rational';
 import type { MassUnit } from './mass-unit'
 import { MASS_UNIT } from './mass-unit';
+import { scaleUnit } from '~/features/core/utils/scale-unit';
 
-const MICROGRAM = 1;
-const MILLIGRAM = 1_000 * MICROGRAM;
-const GRAM = 1_000 * MILLIGRAM;
-const KILOGRAM = 1_000 * GRAM;
-const METRIC_TON = 1_000 * KILOGRAM;
+const GRAM = new Rational(1, 1);
 
-const OUNCE = 28.349523125 * GRAM;
-const POUND = 16 * OUNCE;
-const STONE = 14 * POUND;
-const SHORT_TON = 2_000 * POUND;
-const LONG_TON = 2_240 * POUND;
+const MICROGRAM = scaleUnit(GRAM, 1, 1e6);
+const MILLIGRAM = scaleUnit(GRAM, 1, 1e3);
+const KILOGRAM = scaleUnit(GRAM, 1, 1e-3);
+const METRIC_TON = scaleUnit(KILOGRAM, 1, 1e-3);
 
-export const massScale: Record<MassUnit, number> = {
+const OUNCE = scaleUnit(GRAM, 28349523125, 1e9);
+const POUND = scaleUnit(OUNCE, 16) 
+const STONE = scaleUnit(POUND, 14) 
+const SHORT_TON = scaleUnit(POUND, 2_000);
+const LONG_TON = scaleUnit(POUND, 2_240);
+
+export const massScale: Record<MassUnit, Rational> = {
   [MASS_UNIT.MICROGRAM]: MICROGRAM,
   [MASS_UNIT.MILLIGRAM]: MILLIGRAM,
   [MASS_UNIT.GRAM]: GRAM,
