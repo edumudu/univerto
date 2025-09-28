@@ -1,4 +1,4 @@
-import { createConverter } from '~/features/core/utils/create-converter';
 import { speedScale } from '../constants/speed-scale';
+import { createPreciseConverter } from '~/features/core/utils/create-precise-converter';
 
-export const SpeedUnitConverter = createConverter(speedScale);
+export const SpeedUnitConverter = createPreciseConverter(speedScale);
