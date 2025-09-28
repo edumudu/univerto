@@ -1,23 +1,27 @@
+import { Rational } from '~/features/core/utils/rational';
 import type { DataUnit } from './data-unit'
 import { DATA_UNIT } from './data-unit';
+import { scaleUnit } from '~/features/core/utils/scale-unit';
 
-const BIT = 1;
-const BYTE = 8 * BIT;
-const KILOBYTE = 1_000 * BYTE;
-const KIBIBYTE = 1_024 * BYTE;
-const MEGABYTE = 1_000 * KILOBYTE;
-const MEBIBYTE = 1_024 * MEGABYTE;
-const GIGABYTE = 1_000 * MEGABYTE;
-const GIBIBYTE = 1_024 * GIGABYTE;
-const TERABYTE = 1_000 * GIGABYTE;
-const TEBIBYTE = 1_024 * TERABYTE;
-const PETABYTE = 1_000 * TERABYTE;
-const PEBIBYTE = 1_024 * PETABYTE;
-const EXABYTE = 1_000 * PETABYTE;
-const EXBIBYTE = 1_024 * PEBIBYTE;
+const BIT = new Rational(1, 1); 
+const BYTE = scaleUnit(BIT, 8);
+
+const KILOBYTE = scaleUnit(BYTE, 1_000);
+const MEGABYTE = scaleUnit(KILOBYTE, 1_000);
+const GIGABYTE = scaleUnit(MEGABYTE, 1_000);
+const TERABYTE = scaleUnit(GIGABYTE, 1_000);
+const PETABYTE = scaleUnit(TERABYTE, 1_000);
+const EXABYTE = scaleUnit(PETABYTE, 1_000);
+
+const KIBIBYTE = scaleUnit(BYTE, 1_024);
+const MEBIBYTE = scaleUnit(MEGABYTE, 1_024);
+const GIBIBYTE = scaleUnit(GIGABYTE, 1_024);
+const TEBIBYTE = scaleUnit(TERABYTE, 1_024);
+const PEBIBYTE = scaleUnit(PETABYTE, 1_024);
+const EXBIBYTE = scaleUnit(PEBIBYTE, 1_024);
 
 
-export const dataScale: Record<DataUnit, number> = {
+export const dataScale: Record<DataUnit, Rational> = {
   [DATA_UNIT.BIT]: BIT,
   [DATA_UNIT.BYTE]: BYTE,
   [DATA_UNIT.KILOBYTE]: KILOBYTE,
