@@ -1,4 +1,4 @@
-import { createConverter } from '~/features/core/utils/create-converter';
 import { areaScale } from '../constants/area-scale';
+import { createPreciseConverter } from '~/features/core/utils/create-precise-converter';
 
-export const AreaUnitConverter = createConverter(areaScale);
+export const AreaUnitConverter = createPreciseConverter(areaScale);
