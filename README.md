@@ -1,6 +1,10 @@
-## Univerto
+<div align="center">
 
 [![npm version](https://img.shields.io/npm/v/univerto.svg)](https://www.npmjs.com/package/univerto)
+
+</div>
+
+## Univerto
 
 **Univerto** is a lightweight, zero-dependency, type-safe library for converting units in JavaScript/TypeScript. It provides a fluent API for precise and readable unit conversions.
 
