@@ -31,9 +31,17 @@
       "import": "./dist/units/area.js",
       "require": "./dist/units/area.cjs"
     },
+    "./current": {
+      "import": "./dist/units/current.js",
+      "require": "./dist/units/current.cjs"
+    },
     "./data": {
       "import": "./dist/units/data.js",
       "require": "./dist/units/data.cjs"
+    },
+    "./frequency": {
+      "import": "./dist/units/frequency.js",
+      "require": "./dist/units/frequency.cjs"
     },
     "./length": {
       "import": "./dist/units/length.js",
