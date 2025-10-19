@@ -114,6 +114,18 @@ import { VOLTAGE_UNIT, VoltageUnitConverter } from 'univerto/voltage'
 ```
 Millivolt, Volt, Kilovolt, Megavolt
 
+**Current**
+```ts
+import { CURRENT_UNIT, CurrentUnitConverter } from 'univerto/current'
+```
+Milliampere, Ampere, Kiloampere
+
+**Frequency**
+```ts
+import { FREQUENCY_UNIT, FrequencyUnitConverter } from 'univerto/frequency'
+```
+Millihertz, Hertz, Kilohertz, Megahertz, Gigahertz, Terahertz, RPM (revolutions per minute), Degree per second
+
 ### Inspiration
 
 Made with ❤️ and Inspired by [convert-units](https://github.com/convert-units/convert-units)
