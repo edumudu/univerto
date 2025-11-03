@@ -19,6 +19,9 @@
     "url": "https://github.com/edumudu/univerto.git"
   },
   "homepage": "https://github.com/edumudu/univerto#readme",
+  "files": [
+    "dist"
+  ],
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.cts",
   "module": "./dist/index.js",
