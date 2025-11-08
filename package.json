@@ -19,6 +19,7 @@
     "url": "https://github.com/edumudu/univerto.git"
   },
   "homepage": "https://github.com/edumudu/univerto#readme",
+  "sideEffects": false,
   "files": [
     "dist"
   ],
