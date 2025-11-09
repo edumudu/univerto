@@ -1,6 +1,6 @@
 {
   "name": "univerto",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Simple, 0-dependency unit converter with fluent API",
   "packageManager": "pnpm@10.17.1",
   "engines": {
