@@ -26,16 +26,23 @@ jobs:
           node-version-file: .nvmrc
           cache:: pnpm
           registry-url: https://registry.npmjs.org/
-          
-      - run: pnpm install
-      - run: pnpm test
-        
+      
       - uses: googleapis/release-please-action@v4
+        id: release
         with:
           token: ${{ secrets.PAT_GITHUB }}
           release-type: node
+          
+      - run: pnpm install
+        if: ${{ steps.release.outputs.release_created }}
 
+      - run: pnpm test
+        if: ${{ steps.release.outputs.release_created }}
+        
       - run: pnpm build
+        if: ${{ steps.release.outputs.release_created }}
+
       - run: pnpm publish --access public
+        if: ${{ steps.release.outputs.release_created }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
