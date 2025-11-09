@@ -24,7 +24,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
-          cache:: pnpm
+          cache: pnpm
           registry-url: https://registry.npmjs.org/
       
       - uses: googleapis/release-please-action@v4
