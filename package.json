@@ -16,7 +16,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/edumudu/univerto.git"
+    "url": "git+https://github.com/edumudu/univerto.git"
   },
   "homepage": "https://github.com/edumudu/univerto#readme",
   "sideEffects": false,
