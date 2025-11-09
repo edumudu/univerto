@@ -76,9 +76,13 @@
   "scripts": {
     "build": "tsdown",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "husky": "^9.1.7",
     "tsdown": "^0.14.1",
     "typescript": "^5.9.2",
     "vite-tsconfig-paths": "^5.1.4",
