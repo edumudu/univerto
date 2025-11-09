@@ -44,7 +44,7 @@ jobs:
       - run: pnpm build
         if: ${{ steps.release.outputs.release_created }}
 
-      - run: pnpm publish --access public
+      - run: pnpm exec publint --strict && pnpm publish --access public
         if: ${{ steps.release.outputs.release_created }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
