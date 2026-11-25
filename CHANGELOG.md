@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.4](https://github.com/edumudu/univerto/compare/v0.4.3...v0.4.4) (2026-11-25)
+
+
+### Bug Fixes
+
+* **data:** build binary units from binary units ([#2](https://github.com/edumudu/univerto/issues/2)) ([f58f819](https://github.com/edumudu/univerto/commit/f58f819397ee731f4bd055d9058ba349523a56fc))
+* **time:** swap nanosecond and microsecond scales ([#3](https://github.com/edumudu/univerto/issues/3)) ([4e58e3a](https://github.com/edumudu/univerto/commit/4e58e3a3a4b241b06f15b5929357852395991a46))
+
 ## [0.4.3](https://github.com/edumudu/univerto/compare/v0.4.2...v0.4.3) (2025-11-09)
 
 
