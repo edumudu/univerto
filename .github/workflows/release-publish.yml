@@ -34,7 +34,6 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: pnpm
-          registry-url: https://registry.npmjs.org/
        
       - run: pnpm install
         if: ${{ steps.release.outputs.release_created }}
@@ -47,5 +46,3 @@ jobs:
 
       - run: pnpm exec publint --strict && pnpm publish --access public
         if: ${{ steps.release.outputs.release_created }}
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
