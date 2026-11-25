@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.5](https://github.com/edumudu/univerto/compare/v0.4.4...v0.4.5) (2026-11-25)
+
+
+### Bug Fixes
+
+* release with npm trusted publishing ([#7](https://github.com/edumudu/univerto/issues/7)) ([4063702](https://github.com/edumudu/univerto/commit/4063702372d77f5255105a7c675093f824d7ccf5))
+
 ## [0.4.4](https://github.com/edumudu/univerto/compare/v0.4.3...v0.4.4) (2026-11-25)
 
 
