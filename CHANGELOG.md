@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.6](https://github.com/edumudu/univerto/compare/v0.4.5...v0.4.6) (2026-11-25)
+
+
+### Bug Fixes
+
+* bump tsdown to fix build after rolldown upgrade ([#9](https://github.com/edumudu/univerto/issues/9)) ([a556b58](https://github.com/edumudu/univerto/commit/a556b582778f22e9581a207114c4103c3700ecf0))
+
 ## [0.4.5](https://github.com/edumudu/univerto/compare/v0.4.4...v0.4.5) (2026-11-25)
 
 
