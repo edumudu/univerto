@@ -11,46 +11,33 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  check:
+  typecheck:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-
-      - uses: actions/setup-node@v6
-        with:
-          node-version-file: .nvmrc
-          cache: pnpm
-
-      - run: pnpm install --frozen-lockfile
-
+      - uses: ./.github/actions/setup
       - run: pnpm typecheck
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
       - run: pnpm test
 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
       - run: pnpm build
-
       - run: pnpm exec publint --strict
 
   pr-title:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-
-      - uses: actions/setup-node@v6
-        with:
-          node-version-file: .nvmrc
-          cache: pnpm
-
-      - run: pnpm install --frozen-lockfile
-
+      - uses: ./.github/actions/setup
       - name: Lint PR title (squash merge uses it as the commit message)
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
