@@ -5,8 +5,8 @@ import { Rational } from '~/features/core/utils/rational';
 
 const MS = new Rational(1, 1); // Base
 
-const NS = scaleUnit(MS, 1, 1e3);
-const US = scaleUnit(NS, 1, 1e3);
+const US = scaleUnit(MS, 1, 1e3);
+const NS = scaleUnit(US, 1, 1e3);
 
 const SEC = scaleUnit(MS, 1e3);
 const MIN = scaleUnit(SEC, 60);

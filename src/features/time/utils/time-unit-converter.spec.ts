@@ -44,6 +44,56 @@ describe('TimeUnitConverter', () => {
         quantity: 0.0002777777777777778
       }
     },
+    {
+      from: {
+        unit: TIME_UNIT.MILLISECOND,
+        quantity: 1,
+      },
+      to: {
+        unit: TIME_UNIT.MICROSECOND,
+        quantity: 1_000,
+      }
+    },
+    {
+      from: {
+        unit: TIME_UNIT.MILLISECOND,
+        quantity: 1,
+      },
+      to: {
+        unit: TIME_UNIT.NANOSECOND,
+        quantity: 1_000_000,
+      }
+    },
+    {
+      from: {
+        unit: TIME_UNIT.MICROSECOND,
+        quantity: 1,
+      },
+      to: {
+        unit: TIME_UNIT.NANOSECOND,
+        quantity: 1_000,
+      }
+    },
+    {
+      from: {
+        unit: TIME_UNIT.SECOND,
+        quantity: 1,
+      },
+      to: {
+        unit: TIME_UNIT.NANOSECOND,
+        quantity: 1_000_000_000,
+      }
+    },
+    {
+      from: {
+        unit: TIME_UNIT.NANOSECOND,
+        quantity: 1,
+      },
+      to: {
+        unit: TIME_UNIT.MICROSECOND,
+        quantity: 0.001,
+      }
+    },
   ])('should convert "$from.quantity" $from.unit to to "$to.quantity" $to.unit', ({from, to}) => {
     const result = TimeUnitConverter.from(from.quantity, from.unit).to(to.unit).convert()
 
