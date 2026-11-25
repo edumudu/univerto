@@ -44,6 +44,346 @@ describe('DataUnitConverter', () => {
         quantity: 0.001
       }
     },
+    {
+      from: {
+        unit: DATA_UNIT.KILOBYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 1_000,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.MEGABYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 1_000_000,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.GIGABYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 1_000_000_000,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.TERABYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 1_000_000_000_000,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.PETABYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 1_000_000_000_000_000,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.EXABYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 1_000_000_000_000_000_000,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.KIBIBYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 2 ** 10,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.MEBIBYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 2 ** 20,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.GIBIBYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 2 ** 30,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.TEBIBYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 2 ** 40,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.PEBIBYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 2 ** 50,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.EXBIBYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 2 ** 60,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 1_000,
+      },
+      to: {
+        unit: DATA_UNIT.KILOBYTE,
+        quantity: 1,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 1_000_000,
+      },
+      to: {
+        unit: DATA_UNIT.MEGABYTE,
+        quantity: 1,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 1_000_000_000,
+      },
+      to: {
+        unit: DATA_UNIT.GIGABYTE,
+        quantity: 1,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 1_000_000_000_000,
+      },
+      to: {
+        unit: DATA_UNIT.TERABYTE,
+        quantity: 1,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 1_000_000_000_000_000,
+      },
+      to: {
+        unit: DATA_UNIT.PETABYTE,
+        quantity: 1,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 1_000_000_000_000_000_000,
+      },
+      to: {
+        unit: DATA_UNIT.EXABYTE,
+        quantity: 1,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 2 ** 10,
+      },
+      to: {
+        unit: DATA_UNIT.KIBIBYTE,
+        quantity: 1,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 2 ** 20,
+      },
+      to: {
+        unit: DATA_UNIT.MEBIBYTE,
+        quantity: 1,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 2 ** 30,
+      },
+      to: {
+        unit: DATA_UNIT.GIBIBYTE,
+        quantity: 1,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 2 ** 40,
+      },
+      to: {
+        unit: DATA_UNIT.TEBIBYTE,
+        quantity: 1,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 2 ** 50,
+      },
+      to: {
+        unit: DATA_UNIT.PEBIBYTE,
+        quantity: 1,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.BYTE,
+        quantity: 2 ** 60,
+      },
+      to: {
+        unit: DATA_UNIT.EXBIBYTE,
+        quantity: 1,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.MEBIBYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.KIBIBYTE,
+        quantity: 1_024,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.GIBIBYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.MEBIBYTE,
+        quantity: 1_024,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.TEBIBYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.GIBIBYTE,
+        quantity: 1_024,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.PEBIBYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.TEBIBYTE,
+        quantity: 1_024,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.EXBIBYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.PEBIBYTE,
+        quantity: 1_024,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.MEGABYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.KILOBYTE,
+        quantity: 1_000,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.GIGABYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.MEGABYTE,
+        quantity: 1_000,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.TERABYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.GIGABYTE,
+        quantity: 1_000,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.PETABYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.TERABYTE,
+        quantity: 1_000,
+      }
+    },
+    {
+      from: {
+        unit: DATA_UNIT.EXABYTE,
+        quantity: 1,
+      },
+      to: {
+        unit: DATA_UNIT.PETABYTE,
+        quantity: 1_000,
+      }
+    },
   ])('should convert "$from.quantity" $from.unit to to "$to.quantity" $to.unit', ({from, to}) => {
     const result = DataUnitConverter.from(from.quantity, from.unit).to(to.unit).convert()
 

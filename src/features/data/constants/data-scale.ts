@@ -14,10 +14,10 @@ const PETABYTE = scaleUnit(TERABYTE, 1_000);
 const EXABYTE = scaleUnit(PETABYTE, 1_000);
 
 const KIBIBYTE = scaleUnit(BYTE, 1_024);
-const MEBIBYTE = scaleUnit(MEGABYTE, 1_024);
-const GIBIBYTE = scaleUnit(GIGABYTE, 1_024);
-const TEBIBYTE = scaleUnit(TERABYTE, 1_024);
-const PEBIBYTE = scaleUnit(PETABYTE, 1_024);
+const MEBIBYTE = scaleUnit(KIBIBYTE, 1_024);
+const GIBIBYTE = scaleUnit(MEBIBYTE, 1_024);
+const TEBIBYTE = scaleUnit(GIBIBYTE, 1_024);
+const PEBIBYTE = scaleUnit(TEBIBYTE, 1_024);
 const EXBIBYTE = scaleUnit(PEBIBYTE, 1_024);
 
 
